@@ -7,8 +7,10 @@ public class Main {
 
     public static void main(String[] args) {
 	    System.out.println("Hello design patterns !");
-        ShapeFactory rectangleFactory = new ShapeFactory();
-        Shape someFigure = rectangleFactory.getShape("RECTANGLE");
+        ShapeFactory factory = new ShapeFactory();
+        Shape someFigure = factory.getShape("RECTANGLE");
+        Shape someOtherFigure = factory.getShape("CIRCLE");
         someFigure.draw();
+        someOtherFigure.draw();
     }
 }
