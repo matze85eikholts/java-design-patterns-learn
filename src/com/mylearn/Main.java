@@ -1,5 +1,7 @@
 package com.mylearn;
 
+import factory2.IMiddleware;
+import factory2.MiddlewareFactory;
 import iterator.FruitRepository;
 import iterator.Iterator;
 
@@ -23,5 +25,9 @@ public class Main {
         Shape someOtherFigure = factory.getShape("CIRCLE");
         someFigure.draw();
         someOtherFigure.draw();
+        //-----------------------
+        var middlewareFactory = new MiddlewareFactory();
+        middlewareFactory.getMiddleware(2).doPatch();
+
     }
 }
