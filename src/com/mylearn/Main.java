@@ -7,6 +7,9 @@ import iterator.Iterator;
 
 import factory1.Shape;
 import factory1.ShapeFactory;
+import visitor1.Computer;
+import visitor1.ComputerPart;
+import visitor1.DefiniteVisitor;
 
 
 public class Main {
@@ -28,6 +31,9 @@ public class Main {
         //-----------------------
         var middlewareFactory = new MiddlewareFactory();
         middlewareFactory.getMiddleware(2).doPatch();
+        //-------Visitor-check----
+        ComputerPart computer = new Computer();
+        computer.accept(new DefiniteVisitor());
 
     }
 }
