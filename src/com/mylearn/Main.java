@@ -1,5 +1,6 @@
 package com.mylearn;
 
+import facade1.Facade;
 import factory2.IMiddleware;
 import factory2.MiddlewareFactory;
 import iterator.FruitRepository;
@@ -34,6 +35,9 @@ public class Main {
         //-------Visitor-check----
         ComputerPart computer = new Computer();
         computer.accept(new DefiniteVisitor());
+        ///----------Facade----check-----
+        Facade hairFacade = new Facade();
+        hairFacade.makeStyledHairCut();
 
     }
 }
