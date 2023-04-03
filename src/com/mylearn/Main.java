@@ -8,6 +8,8 @@ import iterator.Iterator;
 
 import factory1.Shape;
 import factory1.ShapeFactory;
+import proxy1.Image;
+import proxy1.ProxyImage;
 import visitor1.Computer;
 import visitor1.ComputerPart;
 import visitor1.DefiniteVisitor;
@@ -38,6 +40,10 @@ public class Main {
         ///----------Facade----check-----
         Facade hairFacade = new Facade();
         hairFacade.makeStyledHairCut();
-
+        /*-----Proxy-1-pattern- check -------*/
+        Image image = new ProxyImage("abc.txt");
+        image.display();
+        System.out.println("--------After creating real image class-------");
+        image.display();
     }
 }
